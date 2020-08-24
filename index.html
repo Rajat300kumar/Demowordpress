@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang=''>
+<head>
+	<meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/styles.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="js/script.js"></script>
+   <script src="js/typewriter.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link href='https://fonts.googleapis.com/css?family=font-family: Arial, Helvetica, sans-serif' rel='stylesheet'>-->
+	<title>Assignment 1: HTML5 CSS3 Guidelines</title>
+	<script type="text/javascript">
+		function buttonClick() {
+	    var email = document.getElementById("email");   
+		var fname = document.getElementById("fname"); 
+		var atposition=email.value.indexOf("@");  
+		var dotposition=email.value.lastIndexOf(".");  
+		var boolen = 1;
+		
+		
+		 if (fname.value==""){
+		
+		fname.style.border="solid 1px  #ff0000";
+		//document.getElementById("errors").innerHTML="Enter valid password"; 
+		  //document.getElementById("errors").style.color=" #e62e00";
+	    
+		return false;
+		} else if(email.value=="" || atposition<1 || dotposition<atposition+2 || dotposition+2>=email.value.length){
+		    email.style.border="solid 1px  #ff0000";
+		   //document.getElementById("errors1").innerHTML="Enter Valid Email";  
+			//document.getElementById("errors1").style.color=" #e62e00";  
+			boolen = 0;
+			if(boolen ){
+			email.style.border="solid 1px green";
+			}
+			return false;
+			
+		}
+		else 
+		return true;
+		}
+	
+	</script>
+	<script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+</head>
+<body>
+	<div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+<div id='cssmenu'>
+<ul>
+	<a style="margin-right: 32%;margin-left: 17%" class="logo" >
+    				<!--<img src="images/down.png" width="50" height="46"  alt="">-->
+    				<i class="fa fa-3x fa-registered" style="color: #253573"></i>
+		 		</a>
+		 		
+   <li><a href='#about'>Home</a></li>
+   <li><a href='#Contact'>Contact</a></li>
+   <li><a href='#About'>About</a></li>
+    
+   <li><a href='#extra'>extra</a></li>
+  
+</ul>
+</div>
+<section id="about" class="wrap">
+	<h1 style="text-align: center;">Primary Headline</h1>
+	<div class="flex-container">
+    <div class="hvrbox-layer_top" style="margin: 10px">
+						   <h2>The Best of headline in this section</h2>
+							<P class="typewrite" data-period="1000" data-type='[ "Hello.. My name is Rajat Ranjan", "And I front-end Developer", "And I am searching for a job"]'>
+                         <span class="wrap"></span>
+                        </p>
+                        
+                        	<span>Heloo this is sub headings</span>
+                        	<p><i class="fa fa-check"></i>the list of Sub header 1</p>
+                        	<p><i class="fa fa-check"></i>the list of Sub header 2</p>
+                            <p><i class="fa fa-check"></i>the list of Sub header 3</p>
+                            
+						</div>
+						<div class="hvrbox">
+							<img src="images/bannerImage.png" alt="clipt art">
+						</div>
+						</div>
+</section>
+
+<h2 id="Contact" style="text-align: center;">~ Main body Headline ~</h2>
+<div id="backgroundcolor">
+<section class="wrap">
+	
+	<div class="flex-container">
+  <div class="one">
+  	
+  	<h3>This section is Main body H</h3>
+  	<p>HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup based pattern to it.HTML5 is the fifth and current major version of HTML, and subsumes XHTML. The current standard, the HTML Living Standard is developed by WHATWG, which is made up of the major browser vendors (Apple, Google, Mozilla, and Microsoft), with the Living Standard also existing in an abridged version. </p>
+  	<h3>This section 2nd  is Main body H</h3>
+  	<p>which is made up of the major browser vendors (Apple, Google, Mozilla, and Microsoft), with the Living Standard also existing in an abridged version.</p>
+  </div>
+  <div>
+  	<div class="two">
+ <!--<h3 style="text-align: center;">Contact Form</h3>-->
+
+<div class="container">
+	<h2>Stay conect with </h2>
+	<span>Note:* mandatory fields</span><br><br>
+  <form action="" onsubmit= "return buttonClick()">
+    <label for="fname"> Name<span style="color: red">*</span></label>
+    <input type="text" id="fname" name="name" placeholder="Your name..">
+
+    <label for="lname">Email<span style="color: red">*</span></label>
+    <input type="text" id="email" name="email" placeholder="email">
+
+    <label for="country">Phone</label>
+    <input type="text" id="lname" name="Phone" placeholder="Phone">
+
+    <label for="subject">Message</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</div>
+  </div>
+</div>
+</section></div>
+<br><br>
+
+
+<section id="About">
+	<div class="wrap">
+	<h1 style="text-align: center;">~ Content of the body ~</h1>
+	<div class="flex-container">
+		<div class="hvrbox">
+	<img src="images/about.svg" alt="Mountains" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top">
+		<div class="hvrbox-text">This one working on hove of image detail.</div>
+	</div>
+</div>
+		<div>
+			<h3>Group work</h3>
+			<p>Group work is a form of voluntary association of members benefiting from cooperative learning, that enhances the total output of the activity than when done individually. It aims to cater for individual differences, develop skills</p>
+		</div>
+	</div>
+	<div class="flex-container ">
+		<div>
+		<h3>Smart Work</h3>
+		<p>Without hard work, nothing grows but weeds." said Gordon B. Hinckley which clearly states the importance of consistency and hard work if you want to achieve good in your life. But working hard doesn't always offer success on a plate for you, if not applied with brains. So the debate is going on which one to prefer Hard Work or Smart Work</p>
+		</div>
+		<div class="hvrbox">
+	<img src="images/illustration.png" alt="Mountains" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top">
+		<div class="hvrbox-text">This one working on hove of image detail make a smart work.</div>
+	</div>
+</div>
+	</div>
+</div>
+</section>
+
+<section id="extra" style="background-color: #3d509a">
+	<div class="wrap">
+	<div class="flex-container">
+		
+     <div  id="example">
+     	<h3>Flex box 1</h3>
+     	<p>he page "Flex box" does not exist. You can ask for it to be created, but consider checking the search results below to see whether the topic is already covered.</p>
+     </div>
+    
+     <div  id="example">
+     	<h3>Flex box 2</h3>
+     	<p>Flexible Box Layout, commonly known as Flexbox, is a CSS3 web layout model. It is in the W3C's candidate recommendation (CR) stage. The flex layout allows</p>
+     </div>
+    
+	</div>
+</div>
+</section><br>
+<br>
+
+<section style=" background-color: #818181;">
+	<div class="flex-container">
+		<div id="example2">
+			<p>A footer widget area is the section above the footer that includes widgets </p>
+		</div>
+	</div>
+</section>
+<br>
+<br>
+<section>
+	<div style="text-align: center;">
+		<p>RR | AECS Layout, Marathahalli, Bengaluru | XYZ</p>
+		<p> &copy; 2019 Copyright , All Rights Reserved <a class="mail" href="#rajatranjan300@gmail.com">rajatranjan300@gmail.com </a></p>
+	</div>
+	</div>
+</section>
+</body>
+</html>
